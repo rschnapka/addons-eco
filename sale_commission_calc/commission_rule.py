@@ -18,7 +18,7 @@
 #    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
 ##############################################################################
-from openerp.osv import fields, osv
+from openerp.osv import orm, fields
 
 # Available commission rule
 COMMISSION_RULE = [('percent_fixed', 'Fixed Commission Rate'),
@@ -28,7 +28,7 @@ COMMISSION_RULE = [('percent_fixed', 'Fixed Commission Rate'),
                       ('percent_amount', 'Commission Rate By Order Amount')]
 
 
-class commission_rule(osv.osv):
+class commission_rule(orm.Model):
 
     _name = "commission.rule"
     _description = "Commission Rule"
@@ -49,7 +49,7 @@ class commission_rule(osv.osv):
 commission_rule()
 
 
-class commission_rule_rate(osv.osv):
+class commission_rule_rate(orm.Model):
 
     _name = "commission.rule.rate"
     _description = "Commission Rule Rate"

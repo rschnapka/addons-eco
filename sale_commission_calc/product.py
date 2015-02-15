@@ -19,15 +19,16 @@
 #
 ##############################################################################
 
-from openerp.osv import fields, osv
+from openerp.osv import orm, fields
 import openerp.addons.decimal_precision as dp
 
 
-class product_product(osv.osv):
+class product_product(orm.Model):
 
     _inherit = "product.product"
     _columns = {
-        'percent_commission': fields.float('Commission (%)', digits=(16, 2), readonly=False),
+        'percent_commission': fields.float('Commis. step (%)', digits=(16, 2), readonly=False, help='Commission used only in step-commissioning scenario'),
+        'percent_comm_static': fields.float('Commis. static (%)', digits=(16, 2), readonly=False, help='Commission used only in single/static commissioning scenario'),
         'limit_price': fields.float('Limit Price', digits_compute=dp.get_precision('Product Price'), readonly=False, help="Minimum product selling price to get commission"),
         'rate_step_ids': fields.one2many('commission.rate.step', 'product_id', 'Commission Rate Steps', readonly=False)
     }
@@ -35,7 +36,7 @@ class product_product(osv.osv):
 product_product()
 
 
-class commission_rate_step(osv.osv):
+class commission_rate_step(orm.Model):
 
     _name = "commission.rate.step"
     _columns = {
@@ -48,11 +49,12 @@ class commission_rate_step(osv.osv):
 commission_rate_step()
 
 
-class product_category(osv.osv):
+class product_category(orm.Model):
 
     _inherit = "product.category"
     _columns = {
-        'percent_commission': fields.float('Commission (%)', digits=(16, 2), readonly=False)
+        'percent_commission': fields.float('Commission (%)', digits=(16, 2), readonly=False, help='Commission used only in step-commissioning scenario'),
+        'percent_comm_static': fields.float('Commission (%)', digits=(16, 2), readonly=False, help='Commission used only in single/static commissioning scenario')
     }
 
 product_category()

@@ -21,7 +21,7 @@
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
 import time
-from openerp.osv import fields, osv
+from openerp.osv import osv, orm, fields
 from openerp.tools.translate import _
 import openerp.addons.decimal_precision as dp
 
@@ -36,7 +36,7 @@ COMMISSION_LINE_STATE = [('draft', 'Not Ready'),
                           ('skip', 'Skipped')]
 
 
-class sale_team(osv.osv):
+class sale_team(orm.Model):
 
     _name = "sale.team"
     _description = "Sales Team"
@@ -65,7 +65,7 @@ class sale_team(osv.osv):
 sale_team()
 
 
-class commission_worksheet(osv.osv):
+class commission_worksheet(orm.Model):
 
     _name = 'commission.worksheet'
     _description = 'Commission Worksheet'
@@ -161,7 +161,7 @@ class commission_worksheet(osv.osv):
             # For each product line
             commission_amt = 0.0
             for line in invoice.invoice_line:
-                percent_commission = line.product_id.categ_id.percent_commission
+                percent_commission = line.product_id.categ_id.percent_comm_static
                 commission_rate = percent_commission and percent_commission / 100 or 0.0
                 if commission_rate:
                     commission_amt += line.price_subtotal * commission_rate
@@ -185,7 +185,7 @@ class commission_worksheet(osv.osv):
             commission_amt = 0.0
             for line in invoice.invoice_line:
                 # Make sure the product price each the limit_price, before assign commission
-                percent_commission = (line.price_unit >= line.product_id.limit_price) and line.product_id.percent_commission or 0.0
+                percent_commission = (line.price_unit >= line.product_id.limit_price) and line.product_id.percent_comm_static or 0.0
                 commission_rate = percent_commission and percent_commission / 100 or 0.0
                 if commission_rate:
                     commission_amt += line.price_subtotal * commission_rate
@@ -544,7 +544,7 @@ class commission_worksheet(osv.osv):
 commission_worksheet()
 
 
-class commission_worksheet_line(osv.osv):
+class commission_worksheet_line(orm.Model):
 
     _name = "commission.worksheet.line"
     _description = "Commission Worksheet Lines"
@@ -649,7 +649,10 @@ class commission_worksheet_line(osv.osv):
         # 2) last_pay_date
         last_pay_date = self._calculate_last_pay_date(cr, uid, last_pay_date_rule, invoice, context=context)
         # Add buffer
-        last_pay_date = (datetime.strptime(last_pay_date, '%Y-%m-%d') + relativedelta(days=buffer_days or 0)).strftime('%Y-%m-%d')
+        if last_pay_date:
+            last_pay_date = (datetime.strptime(last_pay_date, '%Y-%m-%d') + relativedelta(days=buffer_days or 0)).strftime('%Y-%m-%d')
+        else:
+            last_pay_date = None
         # 3) posted payment?
         # 3.1) invoie's payment and paid amount
         posted = invoice.state == 'paid' and self._is_pay_posted(cr, uid, invoice) or False
@@ -783,7 +786,7 @@ class commission_worksheet_line(osv.osv):
 commission_worksheet_line()
 
 
-class res_users(osv.osv):
+class res_users(orm.Model):
 
     _inherit = "res.users"
     _columns = {

@@ -19,10 +19,10 @@
 #
 ##############################################################################
 
-from openerp.osv import fields, osv
+from openerp.osv import orm, fields
 
 
-class payment_register(osv.osv):
+class payment_register(orm.Model):
 
     _inherit = 'payment.register'
 
