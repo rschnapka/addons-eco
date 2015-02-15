@@ -1,0 +1,1075 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+#
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-02-14 15:45+0000\n"
+"PO-Revision-Date: 2015-02-14 18:17+0100\n"
+"Last-Translator: Rudolf Schnapka <rs@techno-flex.de>\n"
+"Language-Team: \n"
+"Language: de\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0 field:commission.rule.rate,commission_rule_id:0
+#: model:ir.model,name:sale_commission_calc.model_commission_rule
+#: field:sale.team,commission_rule_id:0
+msgid "Commission Rule"
+msgstr "Provisionsregel"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+#: model:ir.actions.act_window,name:sale_commission_calc.action_salesperson_commission_rule
+#: model:ir.ui.menu,name:sale_commission_calc.menu_salesperson_commission_rule
+msgid "Salespersons"
+msgstr "Verkäufer"
+
+#. module: sale_commission_calc
+#: view:invoice.info:0
+msgid "Invoice Line Tax Info"
+msgstr "Positionssteuer"
+
+#. module: sale_commission_calc
+#: field:account.invoice.team,commission_rule_id:0
+#: field:commission.worksheet,commission_rule_id:0
+#: field:res.users,commission_rule_id:0
+msgid "Applied Commission"
+msgstr "Ermittelte Provision"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet,state:0
+#: selection:commission.worksheet.line,invoice_state:0
+#: selection:commission.worksheet.line,state:0
+msgid "Cancelled"
+msgstr "Storniert"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Adjusted Total"
+msgstr "Angepasster Gesamtbetrag"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Create Commission invoice"
+msgstr "Provisionsabrechnung anlegen"
+
+#. module: sale_commission_calc
+#: view:generate.commission.worksheet:0
+msgid "Generate Commission Worksheet Result"
+msgstr "Arbeitsblatt d. Provisionsabrechnung"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_account_invoice_team
+msgid "account.invoice.team"
+msgstr "account.invoice.team"
+
+#. module: sale_commission_calc
+#: view:sale.team:0
+msgid "Inherited Team"
+msgstr "Untergeordnetetes Team"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Name or Period"
+msgstr "Periodenbezeichnung"
+
+#. module: sale_commission_calc
+#: model:ir.actions.act_window,name:sale_commission_calc.action_product_rate
+#: model:ir.ui.menu,name:sale_commission_calc.menu_product_rate
+#: view:product.product:0
+msgid "Product Rates"
+msgstr "Produktprovision"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet,state:0
+msgid ""
+"* The 'Draft' status is set when the work sheet in draft "
+"status.                     \n"
+"* The 'Confirmed' status is set when the work sheet is confirmed by related "
+"parties.                     \n"
+"* The 'Done' status is set when the work sheet is ready to pay for "
+"commission. This state can not be undone.                     \n"
+"* The 'Cancelled' status is set when a user cancel the work sheet."
+msgstr ""
+"* Der Status 'Entwurf' ist gesetzt während das Arbeitsblatt im Entwurf "
+"bearbeitet wird.\n"
+"* Der Status 'Freigegeben' wird gesetzt, wenn das Arbeitsblatt geprüft und "
+"freigegeben wurde.\n"
+"* Der Status 'Erledigt' wird gesetzt, wenn das Arbeitsblatt zur "
+"Provisionsauszahlung bereitsteht. Dieser Status kann nicht aufgehoben "
+"werden.\n"
+"* Den Status 'Storniert' erhält das Arbeitsblatt, wenn der Benutzer den "
+"Abbruch/Storno herbeigeführt hat."
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:393
+#, python-format
+msgid "You cannot confirm this worksheet. Period not yet over!"
+msgstr ""
+"Sie dürfen das Arbeitsblatt noch nicht freigeben. Die Periode ist noch nicht "
+"vorüber."
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,date_invoice:0
+msgid "Invoice Date"
+msgstr "Rechnungsdatum"
+
+#. module: sale_commission_calc
+#: view:generate.commission.worksheet:0 view:update.invoice.commission:0
+msgid "Update"
+msgstr "Aktualisierung"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,require_posted:0
+#: field:res.users,require_posted:0 field:sale.team,require_posted:0
+msgid "Require Payment Detail Posted"
+msgstr "Gebuchte Zahlung erforderlich"
+
+#. module: sale_commission_calc
+#: field:product.product,limit_price:0
+msgid "Limit Price"
+msgstr "Mindestpreis"
+
+#. module: sale_commission_calc
+#: selection:generate.commission.worksheet,state:0
+#: selection:update.invoice.commission,state:0
+msgid "init"
+msgstr "init"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Calculate Commission"
+msgstr "Provision ausrechnen"
+
+#. module: sale_commission_calc
+#: field:account.invoice.team,salesperson_id:0
+#: field:commission.rule,salesperson_ids:0 view:commission.worksheet:0
+#: field:commission.worksheet,salesperson_id:0
+msgid "Salesperson"
+msgstr "Verkäufer"
+
+#. module: sale_commission_calc
+#: help:res.users,require_posted:0 help:sale.team,require_posted:0
+msgid ""
+"Require that all payment detail related to payments to invoice has been "
+"posted."
+msgstr ""
+"Erfordert, dass alle Zahlungen zum Ausgleich der Rechnung auch gebucht sind."
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,state:0
+msgid "Worksheet State"
+msgstr "Arbeitsblattstatus"
+
+#. module: sale_commission_calc
+#: view:sale.team:0
+msgid "This team is the parent of the following teams"
+msgstr "Dieses Team ist den nachfolgenden übergestellt"
+
+#. module: sale_commission_calc
+#: field:invoice.info.line,price_subtotal:0
+msgid "Subtotal"
+msgstr "Zwischensumme"
+
+#. module: sale_commission_calc
+#: field:invoice.info.line,uos_id:0
+msgid "UoM"
+msgstr "ME"
+
+#. module: sale_commission_calc
+#: help:product.product,limit_price:0
+msgid "Minimum product selling price to get commission"
+msgstr "Mindestpreis, (um Provision zu erhalten)"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,last_pay_date:0
+msgid "Due Date"
+msgstr "Fälligkeitsdatum"
+
+#. module: sale_commission_calc
+#: view:generate.commission.worksheet:0
+msgid ""
+"This process look into each team/salesperson for worksheet that has not been "
+"created to date, and create them."
+msgstr ""
+"Der Vorgang prüft für jedes Team/ jeden Verkäufer, ob ein jeweiliges "
+"Arbeitsblatt erstellt ist und legt dieses ggf. an."
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:442
+#: code:addons/sale_commission_calc/commission_calc.py:776
+#, python-format
+msgid "Error!"
+msgstr "Fehler!"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,invoice_amt:0
+msgid "Amount"
+msgstr "Betrag"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,require_paid:0 field:res.users,require_paid:0
+#: field:sale.team,require_paid:0
+msgid "Require Paid Invoice"
+msgstr "Rechnungsausgleich erforderlich"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Receiver"
+msgstr "Empfänger"
+
+#. module: sale_commission_calc
+#: view:update.invoice.commission:0
+msgid "Invoice Updates Result"
+msgstr "Ergebnis Rechnungsaktualisierung"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:517
+#, python-format
+msgid "Period: "
+msgstr "Periode:"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,adjust_amt:0
+msgid "Adjustment can be both positive or negative"
+msgstr "Anpassung kann positiv wie negativ sein"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:777
+#, python-format
+msgid ""
+"You can't delete this Commission "
+"Worksheet,                                                 because "
+"commission has been issued for Invoice No. %s"
+msgstr ""
+"Sie dürfen dieses Arbeitsblatt nicht löschen, da Provision zur Rechnung %s "
+"bereits hierin verrechnet ist."
+
+#. module: sale_commission_calc
+#: model:ir.ui.menu,name:sale_commission_calc.menu_commission_calc_config
+msgid "Configuration"
+msgstr "Einstellungen"
+
+#. module: sale_commission_calc
+#: field:account.invoice,worksheet_id:0 view:commission.worksheet:0
+#: field:commission.worksheet.line,worksheet_id:0
+#: model:ir.model,name:sale_commission_calc.model_commission_worksheet
+msgid "Commission Worksheet"
+msgstr "Provisionsarbeitsblatt"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet.line,force:0
+msgid "Skip"
+msgstr "Überspringen"
+
+#. module: sale_commission_calc
+#: model:ir.actions.act_window,name:sale_commission_calc.action_user_commission_worksheet_form
+#: model:ir.ui.menu,name:sale_commission_calc.menu_user_commission_worksheet
+msgid "Salesperson Worksheet"
+msgstr "Verkäuferarbeitsblatt"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,note:0
+msgid "Reason for forcing"
+msgstr "Grund für Zwang"
+
+#. module: sale_commission_calc
+#: field:create.commission.invoice,commission_amt:0
+msgid "Commission Amount"
+msgstr "Provisionsbetrag"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Accounts"
+msgstr "Konten"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,last_pay_date:0
+msgid ""
+"Last payment date that will make commission valid. This date is calculated "
+"by the due date condition"
+msgstr ""
+"Letztes Zahldatum, welches die Provision gültig macht. Dieses Datum wird aus "
+"der Fälligkeitsbedingung abgeleitet."
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,amount_valid:0
+#: selection:commission.worksheet.line,commission_state:0
+msgid "Ready"
+msgstr "Bereit"
+
+#. module: sale_commission_calc
+#: field:commission.rule,rule_rates:0
+#: model:ir.ui.menu,name:sale_commission_calc.menu_commission_calc_rate
+#: view:product.product:0
+msgid "Rates"
+msgstr "Sätze"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+msgid ""
+"Commission Rate Steps is defined for each product. Please go to menu Rules & "
+"Rates / Product Rate Price Step to define it"
+msgstr ""
+"Provisionierungs-Stufensätze werden für jedes Produkt einzeln festgelegt. "
+"Suchen Sie das Menü Regeln & Sätze / Provisionsstufensätze zur Definition auf"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet,state:0
+#: selection:commission.worksheet.line,state:0
+msgid "Confirmed"
+msgstr "Freigegeben"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Confirm"
+msgstr "Freigeben"
+
+#. module: sale_commission_calc
+#: view:create.commission.invoice:0
+#: model:ir.actions.act_window,name:sale_commission_calc.action_create_commission_invoice
+msgid "Commission Invoice"
+msgstr "Rechnung provisionieren"
+
+#. module: sale_commission_calc
+#: view:account.invoice:0
+msgid "onchange_user_id(user_id)"
+msgstr "onchange_user_id(user_id)"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,commission_amt:0
+msgid "Commission"
+msgstr "Provision"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,commission_state:0
+msgid "State"
+msgstr "Status"
+
+#. module: sale_commission_calc
+#: view:product.product:0
+msgid "Price over"
+msgstr "Preis über"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:442
+#, python-format
+msgid "No commission rule specified for this salesperson/team!"
+msgstr "Keine Provisionierung für dieses Team / diesen Verkäufer festgelegt"
+
+#. module: sale_commission_calc
+#: sql_constraint:commission.worksheet:0
+msgid "Duplicate Sale Team / Period"
+msgstr "Verkaufsteam / Periode duplizieren"
+
+#. module: sale_commission_calc
+#: field:commission.rule,type:0
+msgid "Type"
+msgstr "Art"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,allow_overdue:0 field:res.users,allow_overdue:0
+msgid "Allow Overdue Payment"
+msgstr "Zahlung in Überfälligkeit gewähren"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_product_category
+msgid "Product Category"
+msgstr "Warengruppe"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Group By..."
+msgstr "Gruppieren..."
+
+#. module: sale_commission_calc
+#: selection:commission.rule,type:0
+msgid "Product Commission Rate"
+msgstr "Produkt-Provisionssatz"
+
+#. module: sale_commission_calc
+#: field:product.product,rate_step_ids:0
+msgid "Commission Rate Steps"
+msgstr "Provisionierungsstufensätze"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+msgid ""
+"Commission Rate is defined for each product. Please go to menu Rules & "
+"Rates / Product Rates to define it"
+msgstr ""
+"Provisionssatz wir je Produkt definiert. Gehen Sie zum Menü Regeln & Sätze / "
+"Provisionssätze um diese festzulegen"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+msgid ""
+"Commission Rate is defined for each product category. Please go to Product "
+"Category window to define it"
+msgstr ""
+"Provisionssatz wird je Warengruppe definiert. Gehen Sie zur Sicht "
+"Produktwarengruppe um diese festzulegen"
+
+#. module: sale_commission_calc
+#: model:ir.actions.act_window,name:sale_commission_calc.action_sale_team_form
+#: model:ir.ui.menu,name:sale_commission_calc.menu_sale_team
+msgid "Sale Teams"
+msgstr "Verkaufsteams"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet,last_pay_date_rule:0
+#: selection:res.users,last_pay_date_rule:0
+#: selection:sale.team,last_pay_date_rule:0
+msgid "Invoice Date + Customer Payment Term"
+msgstr "Rechnungsdatum & Kundenzahlungsbedingung"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Other Information"
+msgstr "Andere Information"
+
+#. module: sale_commission_calc
+#: field:commission.rule.rate,amount_upto:0
+msgid "Amount Up-To"
+msgstr "Betragsobergrenze"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_update_invoice_commission
+msgid "Update Invoice Commission"
+msgstr "Rechnungprovisionierung aktualisieren"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/wizard/generate_commission_worksheet.py:46
+#, python-format
+msgid "Number of Salesperson Commission Worksheet"
+msgstr "Anzahl Verkäufer-Provisionsarbeitsblätter"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:393
+#: code:addons/sale_commission_calc/commission_calc.py:405
+#: code:addons/sale_commission_calc/commission_calc.py:491
+#, python-format
+msgid "Warning!"
+msgstr "Hinweis!"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 field:commission.worksheet,state:0
+#: field:commission.worksheet.line,invoice_state:0
+#: field:generate.commission.worksheet,state:0
+#: field:update.invoice.commission,state:0
+msgid "Status"
+msgstr "Status"
+
+#. module: sale_commission_calc
+#: field:account.invoice.team,invoice_id:0
+#: field:commission.worksheet.line,invoice_id:0
+#: model:ir.model,name:sale_commission_calc.model_account_invoice
+msgid "Invoice"
+msgstr "Rechnung"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,amount_skip:0
+#: selection:commission.worksheet.line,commission_state:0
+msgid "Skipped"
+msgstr "Übersprungen"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,worksheet_lines:0
+msgid "Calculation Lines"
+msgstr "Berechnungspositionen"
+
+#. module: sale_commission_calc
+#: view:generate.commission.worksheet:0 view:invoice.info:0
+#: view:update.invoice.commission:0
+msgid "Close"
+msgstr "Schliessen"
+
+#. module: sale_commission_calc
+#: field:sale.team,implied_ids:0
+msgid "Inherits"
+msgstr "Erbt"
+
+#. module: sale_commission_calc
+#: field:commission.rate.step,amount_over:0
+msgid "From Unit Price"
+msgstr "aus Einzelpreis"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Total Commission"
+msgstr "Gesamtprovision"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,invoice_ids:0
+msgid "Invoices"
+msgstr "Rechnungen"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet.line,invoice_state:0
+msgid "Open"
+msgstr "Offen"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet,last_pay_date_rule:0
+#: selection:res.users,last_pay_date_rule:0
+#: selection:sale.team,last_pay_date_rule:0
+msgid "Invoice Due Date (default)"
+msgstr "Rechnungsfälligkeit (Vorgabe)"
+
+#. module: sale_commission_calc
+#: view:account.invoice:0
+msgid "Salesperson/Team and Commission"
+msgstr "Verkäufer / Team und Provision"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/wizard/generate_commission_worksheet.py:48
+#, python-format
+msgid "Number of Team Commission Worksheet"
+msgstr "Anzahl Team-Provisionsarbeitsblätter"
+
+#. module: sale_commission_calc
+#: model:ir.ui.menu,name:sale_commission_calc.menu_commission_calc_rule
+msgid "Rules"
+msgstr "Regeln"
+
+#. module: sale_commission_calc
+#: view:product.product:0
+msgid "Commission Steps"
+msgstr "Provisionsstufen"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:491
+#, python-format
+msgid "No Commission Invoice(s) can be created for Worksheet %s"
+msgstr "Zum Arbeitsblatt %s kann keine Provisionsabrechnung erstellt werden."
+
+#. module: sale_commission_calc
+#: help:sale.team,buffer_days:0
+msgid "Additional days after last payment date to be eligible for commission."
+msgstr "Toleranztage nach Fälligkeit, in denen Provision noch gewährt wird."
+
+#. module: sale_commission_calc
+#: selection:generate.commission.worksheet,state:0
+#: selection:update.invoice.commission,state:0
+msgid "done"
+msgstr "erledigt"
+
+#. module: sale_commission_calc
+#: help:res.users,require_paid:0 help:sale.team,require_paid:0
+msgid "Require invoice to be paid in full amount."
+msgstr "Erfordert vollständigen Rechnungsausgleich."
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_res_users
+#: field:sale.team,users:0
+msgid "Users"
+msgstr "Benutzer"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,done:0
+msgid "This flag show whether the commission has been issued."
+msgstr "Dieses Kennzeichen zeigt die erfolgte Provisionszahlung an."
+
+#. module: sale_commission_calc
+#: selection:commission.rule,type:0
+msgid "Fixed Commission Rate"
+msgstr "Fester Provisionssatz"
+
+#. module: sale_commission_calc
+#: model:ir.actions.act_window,name:sale_commission_calc.action_product_rate_price_step
+#: model:ir.ui.menu,name:sale_commission_calc.menu_product_rate_price_step
+#: view:product.product:0
+msgid "Product Rate Price Step"
+msgstr "Provisionsstufensatz"
+
+#. module: sale_commission_calc
+#: model:ir.ui.menu,name:sale_commission_calc.menu_update_invoice_commission
+#: view:update.invoice.commission:0
+msgid "Update Invoices"
+msgstr "Rechnungen aktualisieren"
+
+#. module: sale_commission_calc
+#: field:account.invoice.team,sale_team_id:0 view:commission.worksheet:0
+#: field:commission.worksheet,sale_team_id:0
+msgid "Team"
+msgstr "Team"
+
+#. module: sale_commission_calc
+#: view:update.invoice.commission:0
+msgid ""
+"This process will find all customer invoices which has no commission updated "
+"yet, then update commission rule according to the salesperson of those "
+"invoices. Make sure, each salesperson has commission rule assigned."
+msgstr ""
+"Dieser Vorgang wird alle Ausgangsrechnungen ohne Provisionierung erfassen "
+"und die Provisionierung gemäß Regelung zum eingetragenen Verkäufer "
+"durchführen. Achten Sie bitte darauf, dass dem Verkäufer entsprechende "
+"Provisionierungs-Regeln zugeordnet sind."
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,note:0
+msgid "Note"
+msgstr "Hinweis"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,paid_date:0
+msgid "The date of payment that make this invoice marked as paid"
+msgstr "Das Zahldatum, welches diese Rechnung als Beglichen kennzeichnet"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 selection:commission.worksheet,state:0
+#: selection:commission.worksheet.line,state:0
+msgid "Draft"
+msgstr "Entwurf"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Set to Draft"
+msgstr "Auf Entwurf setzen"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 field:invoice.info.line,invoice_info_id:0
+#: model:ir.actions.act_window,name:sale_commission_calc.action_invoice_info
+#: model:ir.model,name:sale_commission_calc.model_invoice_info
+msgid "Invoice Info"
+msgstr "Rechnungsauskunft"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+msgid "Applied To"
+msgstr "Angewandt auf"
+
+#. module: sale_commission_calc
+#: field:commission.rate.step,percent_commission:0
+#: field:commission.rule.rate,percent_commission:0
+#: field:product.category,percent_commission:0
+#: field:product.product,percent_commission:0
+msgid "Commission (%)"
+msgstr "Provision (%)"
+
+#. module: sale_commission_calc
+#: field:commission.rule,rule_conditions:0
+msgid "Conditions"
+msgstr "Bedingungen"
+
+#. module: sale_commission_calc
+#: field:sale.team,allow_overdue:0
+msgid "Allow overdue payment"
+msgstr "Überfällige Zahlung zulässig"
+
+#. module: sale_commission_calc
+#: help:res.users,allow_overdue:0 help:sale.team,allow_overdue:0
+msgid "Allow paying commission with overdue payment."
+msgstr "Erlaube Provisionierung trotz Zahlungsverzug"
+
+#. module: sale_commission_calc
+#: model:ir.ui.menu,name:sale_commission_calc.menu_generate_commission_worksheet
+msgid "Create Worksheet(s)"
+msgstr "Arbeitsblatt anlegen"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 field:commission.worksheet,amount_total:0
+msgid "Total Amount"
+msgstr "Gesamtbetrag"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+#: selection:commission.worksheet.line,invoice_state:0
+msgid "Paid"
+msgstr "Bezahlt"
+
+#. module: sale_commission_calc
+#: view:create.commission.invoice:0 view:generate.commission.worksheet:0
+#: view:update.invoice.commission:0
+msgid "or"
+msgstr "oder"
+
+#. module: sale_commission_calc
+#: view:create.commission.invoice:0
+#: model:ir.model,name:sale_commission_calc.model_create_commission_invoice
+msgid "Create Commission Invoice"
+msgstr "Provisionsabrechnung anlegen"
+
+#. module: sale_commission_calc
+#: model:ir.actions.act_window,name:sale_commission_calc.action_team_commission_worksheet_form
+#: model:ir.ui.menu,name:sale_commission_calc.menu_team_commission_worksheet
+msgid "Team Worksheet"
+msgstr "Team-Arbeitsblatt"
+
+#. module: sale_commission_calc
+#: view:sale.team:0
+msgid "Groups"
+msgstr "Gruppen"
+
+#. module: sale_commission_calc
+#: field:commission.rule,active:0
+msgid "Active"
+msgstr "Aktiv"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Commission Invoices"
+msgstr "Rechnungen provisionieren"
+
+#. module: sale_commission_calc
+#: model:res.groups,name:sale_commission_calc.group_sale_commission_calc_user
+msgid "User"
+msgstr "Benutzer"
+
+#. module: sale_commission_calc
+#: field:create.commission.invoice,comment:0
+msgid "Comment"
+msgstr "Hinweis"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Adjust Amount"
+msgstr "Betrag anpassen"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,amount_draft:0
+#: selection:commission.worksheet.line,commission_state:0
+msgid "Not Ready"
+msgstr "Nicht bereit"
+
+#. module: sale_commission_calc
+#: sql_constraint:commission.worksheet:0
+msgid "Duplicate Salesperson / Period"
+msgstr "Verkäufer / Periode duplizieren"
+
+#. module: sale_commission_calc
+#: field:account.invoice,sale_team_ids:0 view:commission.rule:0
+#: field:commission.rule,sale_team_ids:0
+msgid "Teams"
+msgstr "Teams"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,posted:0
+msgid "This flag show whether all payment has been posted as Payment Details"
+msgstr "Dieses Kennzeichen zeigt an, dass alle Zahlungen gebucht sind"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,amount_invalid:0
+#: selection:commission.worksheet.line,commission_state:0
+msgid "Invalid"
+msgstr "Ungültig"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_commission_rule_rate
+msgid "Commission Rule Rate"
+msgstr "Provisionsregelsatz"
+
+#. module: sale_commission_calc
+#: field:invoice.info.line,quantity:0
+msgid "Quantity"
+msgstr "Menge"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/wizard/update_invoice_commission.py:69
+#: model:ir.actions.act_window,name:sale_commission_calc.action_update_invoice_commission
+#, python-format
+msgid "Update Invoice's Commission"
+msgstr "Provisionierung der Rechnung aktualisieren"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,force:0
+msgid "Force"
+msgstr "Erzwingen"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Worksheet "
+msgstr "Arbeitsblatt"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 field:commission.worksheet,period_id:0
+msgid "Period"
+msgstr "Periode"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_commission_rate_step
+msgid "commission.rate.step"
+msgstr "commission.rate.step"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+msgid "Rule Rates"
+msgstr "Regelsätze"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 field:commission.worksheet,amount_done:0
+#: selection:commission.worksheet,state:0
+#: selection:commission.worksheet.line,commission_state:0
+#: field:commission.worksheet.line,done:0
+#: selection:commission.worksheet.line,state:0
+msgid "Done"
+msgstr "Erledigt"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,last_pay_date_rule:0
+#: field:res.users,last_pay_date_rule:0 field:sale.team,last_pay_date_rule:0
+msgid "Last Pay Date Rule"
+msgstr "Regel zur Zahlfrist"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0 view:create.commission.invoice:0
+#: view:generate.commission.worksheet:0 view:update.invoice.commission:0
+msgid "Cancel"
+msgstr "Abbrechen"
+
+#. module: sale_commission_calc
+#: selection:commission.rule,type:0
+msgid "Commission Rate By Order Amount"
+msgstr "Provisionssatz nach Bestellbetrag"
+
+#. module: sale_commission_calc
+#: view:product.product:0
+msgid "Beginning Commission"
+msgstr "Beginne Provisionierung"
+
+#. module: sale_commission_calc
+#: view:res.users:0
+msgid "Salesperson Commission Rule"
+msgstr "Verkäufer Provisionsregel"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet,buffer_days:0 field:res.users,buffer_days:0
+#: field:sale.team,buffer_days:0
+msgid "Buffer Days"
+msgstr "Toleranztage"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/wizard/generate_commission_worksheet.py:81
+#: view:generate.commission.worksheet:0
+#: model:ir.actions.act_window,name:sale_commission_calc.action_generate_commission_worksheet
+#: model:ir.model,name:sale_commission_calc.model_generate_commission_worksheet
+#, python-format
+msgid "Generate Commission Worksheet"
+msgstr "Provisionsarbeitsblatt anlegen"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_commission_worksheet_line
+msgid "Commission Worksheet Lines"
+msgstr "Provisionsarbeitsblattpositionen"
+
+#. module: sale_commission_calc
+#: field:commission.rule.rate,amount_over:0
+msgid "Amount Over"
+msgstr "Betrag über"
+
+#. module: sale_commission_calc
+#: view:create.commission.invoice:0
+msgid "Please confirm commission amount as following,"
+msgstr "Bestätigen Sie bitte nachfolgenden Provisionsbetrag."
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+#: model:ir.actions.act_window,name:sale_commission_calc.action_commission_rule_form
+#: model:ir.ui.menu,name:sale_commission_calc.menu_commission_rule
+msgid "Commission Rules"
+msgstr "Provisionierungsregeln"
+
+#. module: sale_commission_calc
+#: selection:commission.rule,type:0
+msgid "Product Commission Rate Steps"
+msgstr "Produkt-Provisionierungsstufen"
+
+#. module: sale_commission_calc
+#: field:invoice.info.line,price_unit:0
+msgid "Unit Price"
+msgstr "Einzelpreis"
+
+#. module: sale_commission_calc
+#: help:sale.team,implied_ids:0
+msgid "Users of this group automatically inherit those groups"
+msgstr "Benutzer dieser Gruppe erben automatisch jene Gruppen"
+
+#. module: sale_commission_calc
+#: view:sale.team:0
+msgid "Team Member"
+msgstr "Team-Mitglied"
+
+#. module: sale_commission_calc
+#: field:generate.commission.worksheet,result:0
+#: field:update.invoice.commission,result:0
+msgid "Result"
+msgstr "Ergebnis"
+
+#. module: sale_commission_calc
+#: field:commission.rate.step,product_id:0
+#: field:invoice.info.line,product_id:0
+#: model:ir.model,name:sale_commission_calc.model_product_product
+msgid "Product"
+msgstr "Produkt"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Worksheet Details"
+msgstr "Arbeitsblattdetails"
+
+#. module: sale_commission_calc
+#: field:invoice.info.line,name:0
+msgid "Description"
+msgstr "Beschreibung"
+
+#. module: sale_commission_calc
+#: sql_constraint:sale.team:0
+msgid "The name of the team must be unique !"
+msgstr "Der Name des Teams muss eindeutig sein."
+
+#. module: sale_commission_calc
+#: selection:commission.rule,type:0
+msgid "Product Category Commission Rate"
+msgstr "Provisionierungssatz der Warengruppe"
+
+#. module: sale_commission_calc
+#: model:ir.ui.menu,name:sale_commission_calc.menu_commission_calc
+msgid "Commission Calc"
+msgstr "Provisionsberechnung"
+
+#. module: sale_commission_calc
+#: field:invoice.info,invoice_id:0
+msgid "Invoice Number"
+msgstr "Rechnungsnummer"
+
+#. module: sale_commission_calc
+#: model:ir.module.category,name:sale_commission_calc.module_category_sale_commission_calc
+#: model:product.template,name:sale_commission_calc.product_product_commission_product_template
+msgid "Sales Commission"
+msgstr "Verkaufsprovision"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,posted:0
+msgid "Posted"
+msgstr "Gebucht"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,partner_id:0
+msgid "Customer"
+msgstr "Kunde"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_payment_register
+msgid "Payment Register"
+msgstr "Zahlung verbuchen"
+
+#. module: sale_commission_calc
+#: field:commission.rule,name:0 field:commission.worksheet,name:0
+#: field:sale.team,name:0
+msgid "Name"
+msgstr "Name"
+
+#. module: sale_commission_calc
+#: model:ir.actions.act_window,name:sale_commission_calc.action_product_categ_rate
+#: model:ir.ui.menu,name:sale_commission_calc.menu_product_categ_rate
+#: view:product.category:0
+msgid "Product Category Rates"
+msgstr "Warengruppensatz"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:518
+#, python-format
+msgid ", Invoice: "
+msgstr ", Rechnung: "
+
+#. module: sale_commission_calc
+#: view:account.invoice:0
+msgid "Salesperson/Teams and Commissions"
+msgstr "Verkäufer/Teams und Provisionen"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,adjust_amt:0
+msgid "Adjust"
+msgstr "Anpassen"
+
+#. module: sale_commission_calc
+#: selection:commission.worksheet.line,force:0
+msgid "Allow"
+msgstr "Zulassen"
+
+#. module: sale_commission_calc
+#: view:commission.rule:0
+msgid "Commission Rates"
+msgstr "Provisionssätze"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,overdue:0
+msgid "Overdue"
+msgstr "Überfällig"
+
+#. module: sale_commission_calc
+#: help:commission.worksheet.line,overdue:0
+msgid "For the paid invoice, is it over due?"
+msgstr "Ist sie zur ausgeglichenen Rechnung überfällig?"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,paid_date:0
+msgid "Paid Date"
+msgstr "Ausgleichsdatum"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/commission_calc.py:405
+#, python-format
+msgid "Worksheet(s) has issued commission(s) and can not be cancelled!"
+msgstr ""
+"Arbeitsblatt/-blätter hat/haben zugewiesene Provisionen und können daher "
+"nicht storniert werden."
+
+#. module: sale_commission_calc
+#: field:commission.rule,fix_percent:0
+msgid "Fix Percentage"
+msgstr "Fester Prozentsatz"
+
+#. module: sale_commission_calc
+#: view:commission.worksheet:0
+msgid "Worksheet Lines"
+msgstr "Arbeitsblattpositionen"
+
+#. module: sale_commission_calc
+#: view:product.product:0
+msgid "Base Commission"
+msgstr "Basisprovision"
+
+#. module: sale_commission_calc
+#: code:addons/sale_commission_calc/wizard/update_invoice_commission.py:65
+#, python-format
+msgid "Number of invoice updated"
+msgstr "Nummer der aktualisierten Rechnung"
+
+#. module: sale_commission_calc
+#: model:ir.model,name:sale_commission_calc.model_sale_team view:sale.team:0
+msgid "Sales Team"
+msgstr "Verkaufsteam"
+
+#. module: sale_commission_calc
+#: model:res.groups,name:sale_commission_calc.group_sale_commission_calc_manager
+msgid "Manager"
+msgstr "Manager"
+
+#. module: sale_commission_calc
+#: view:invoice.info:0 field:invoice.info,invoice_info_line:0
+#: model:ir.model,name:sale_commission_calc.model_invoice_info_line
+msgid "Invoice Info Lines"
+msgstr "Infopositionen zur Rechnung"
+
+#. module: sale_commission_calc
+#: field:commission.worksheet.line,amount_subtotal:0
+msgid "Total"
+msgstr "Gesamt"
+
+#. module: sale_commission_calc
+#: model:res.groups,name:sale_commission_calc.group_sale_commission_calc_sale
+msgid "See Own Worksheet"
+msgstr "Eigenes Arbeitsblatt"
+
+#~ msgid "(Update Line Status)"
+#~ msgstr "(ปรับปรุงสถานะรายการ)"
+
+#~ msgid "Refunded Invoice"
+#~ msgstr "ใบลดหนี้"
